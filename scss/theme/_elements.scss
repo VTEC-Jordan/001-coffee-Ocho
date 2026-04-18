@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	padding: 0 30px;
 	font-size: .8em;
+	border-radius: 25px;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 500;
@@ -255,8 +256,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .generic-blockquote {
 	padding: 30px 50px 30px 30px;
-	background: #f9f9ff;
-	border-left: 2px solid $primary;
+	background: $offwhite;
+	border-left: 3px solid $primary-color;
+	font-style: italic;
 }
 .progress-table-wrap {
 	overflow-x: scroll;

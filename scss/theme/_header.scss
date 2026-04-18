@@ -13,7 +13,7 @@
 }
 
 #header.header-scrolled {
-  background: rgba(#140200, 0.8);
+  background: rgba(28, 31, 23, 0.92);
   transition: all 0.5s;
 }
 
@@ -55,6 +55,7 @@
   color: #fff;
   padding-left: 10px;
   border-left: 4px solid $primary-color;
+  letter-spacing: 2px;
 }
 
 #header #logo img {
@@ -161,7 +162,7 @@
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  // color: $primary-color;
+  color: $primary-color;
 }
 
 .nav-menu > li {
