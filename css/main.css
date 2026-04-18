@@ -2144,7 +2144,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-  background: url("../img/Ocho 4.jpg") center;
+  position: relative;
+  background: linear-gradient(rgba(28, 31, 23, 0.16), rgba(28, 31, 23, 0.16)), url("../img/Ocho 4.jpg") top center no-repeat;
   background-size: cover;
 }
 @media (max-width: 1199.98px) {
@@ -2154,21 +2155,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 768px) {
   .banner-area {
-    background: url("../img/Ocho 4.jpg");
-    background-position: 50% 90% 50% 50%;
+    background: linear-gradient(rgba(28, 31, 23, 0.12), rgba(28, 31, 23, 0.12)), url("../img/Ocho 4.jpg") top center no-repeat;
+    background-size: cover;
   }
 }
 
 .banner-content {
   margin-top: -250px;
+  position: relative;
+  z-index: 2;
 }
 .banner-content h1 {
-  color: #fff;
+  color: #5C6B3A;
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1em;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-shadow: 0px 2px 14px rgba(255, 255, 255, 0.55);
 }
 .banner-content h1 span {
   font-weight: 700;
@@ -2189,8 +2193,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 .banner-content h5 {
-  font-weight: 400;
+  color: #5C6B3A !important;
+  font-weight: 700;
   letter-spacing: 3px;
+  text-shadow: 0px 1px 10px rgba(255, 255, 255, 0.45);
 }
 @media (max-width: 414px) {
   .banner-content br {
