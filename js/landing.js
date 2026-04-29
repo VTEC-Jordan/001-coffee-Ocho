@@ -77,6 +77,7 @@
 
   function initMenuTabs() {
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.menu-tab'));
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.menu-nav-card'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('.menu-panel'));
     var navLinks = Array.prototype.slice.call(document.querySelectorAll('.menu-card-link'));
     var drinksPanel = document.getElementById('panel-drinks');
@@ -121,6 +122,14 @@
       }));
     }
 
+    function setCardExpansion(activeTargetId) {
+      cards.forEach(function (card) {
+        var trigger = card.querySelector('.menu-card-trigger');
+        var isExpanded = !!activeTargetId && trigger && trigger.getAttribute('data-menu-target') === activeTargetId;
+        card.classList.toggle('is-expanded', isExpanded);
+      });
+    }
+
     function collapseTabs() {
       tabs.forEach(function (item) {
         item.classList.remove('is-active');
@@ -133,6 +142,7 @@
         panel.hidden = true;
       });
 
+      setCardExpansion(null);
       emitPanelChange(null);
     }
 
@@ -159,6 +169,7 @@
         panel.hidden = !show;
       });
 
+      setCardExpansion(targetId);
       emitPanelChange(targetId);
     }
 

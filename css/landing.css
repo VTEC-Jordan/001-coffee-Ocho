@@ -436,18 +436,27 @@ p {
 .menu-card-nav {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 0;
   margin-bottom: var(--space-3);
-}
-
-.menu-nav-card {
-  padding: 20px;
   border-radius: 28px;
   border: 1px solid #d8d0c2;
   background:
     radial-gradient(circle at top right, rgba(111, 124, 87, 0.18), transparent 42%),
     linear-gradient(180deg, #fcfaf5 0%, #f2ebdf 100%);
   box-shadow: 0 16px 40px rgba(22, 26, 17, 0.08);
+  overflow: hidden;
+}
+
+.menu-nav-card {
+  padding: 20px;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-nav-card + .menu-nav-card {
+  border-inline-start: 1px solid #d8d0c2;
 }
 
 .menu-nav-tag {
@@ -1482,7 +1491,12 @@ html[dir="rtl"] .baked-actions {
 
 @media (max-width: 768px) {
   .menu-card-nav {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .menu-nav-card + .menu-nav-card {
+    border-inline-start: 1px solid #d8d0c2;
+    border-top: 0;
   }
 
   .menu-drinks-grid {
@@ -1490,6 +1504,10 @@ html[dir="rtl"] .baked-actions {
   }
 
   .menu-card-links {
+    display: none;
+  }
+
+  .menu-nav-card.is-expanded .menu-card-links {
     display: flex;
   }
 
@@ -1530,6 +1548,59 @@ html[dir="rtl"] .baked-actions {
 
   .community-strip img {
     height: 156px;
+  }
+
+  .section-head,
+  .section-note,
+  .two-col > div,
+  .community-copy,
+  .review-item,
+  .stats,
+  .booking-form,
+  .field,
+  .field label,
+  .menu-card-nav,
+  .menu-nav-card,
+  .menu-nav-tag,
+  .menu-nav-note,
+  .menu-tab,
+  .menu-card-links,
+  .menu-panel,
+  .menu-stack-head,
+  .menu-stack-kicker,
+  .menu-stack-head h3,
+  .footer-grid,
+  .footer-follow,
+  .footer-links,
+  .footer-bottom {
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .menu-tab {
+    text-align: center;
+  }
+
+  .cta,
+  .submit-btn,
+  .hero-mobile-cta,
+  .cta-nav {
+    margin-inline: auto;
+  }
+
+  .qr-card {
+    justify-items: center;
+    align-self: center;
+  }
+
+  html[dir="rtl"] .field label,
+  html[dir="rtl"] .section-head,
+  html[dir="rtl"] .footer-grid,
+  html[dir="rtl"] .footer-bottom,
+  html[dir="rtl"] .form-status,
+  html[dir="rtl"] .menu-tab {
+    text-align: center;
   }
 }
 
