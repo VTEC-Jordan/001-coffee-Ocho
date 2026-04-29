@@ -8,6 +8,8 @@
   --surface-dark: #20251a;
   --line: #d7d2c8;
   --font-sans: "Poppins", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans-ar: "Cairo", "Poppins", "Segoe UI", Helvetica, Arial, sans-serif;
+  --base-font-size: 16px;
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -27,11 +29,15 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  font-size: var(--base-font-size);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-size: 1rem;
   color: var(--ocho-ink);
   background: var(--surface);
   line-height: 1.6;
@@ -1332,7 +1338,15 @@ p {
 }
 
 html[dir="rtl"] body {
+  font-family: var(--font-sans-ar);
   text-align: right;
+}
+
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select,
+html[dir="rtl"] button {
+  font-family: var(--font-sans-ar);
 }
 
 html[dir="rtl"] .header-inner {
@@ -1349,7 +1363,12 @@ html[dir="rtl"] .community-list {
 }
 
 html[dir="rtl"] .qr-card {
+  align-self: flex-start;
   justify-items: end;
+}
+
+html[dir="rtl"] .qr-card img {
+  transform: none;
 }
 
 html[dir="rtl"] .menu-row,
