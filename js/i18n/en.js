@@ -89,6 +89,8 @@ window.OCHO_I18N.en = {
 		"footer .footer-grid > div:nth-child(3) a[href='#menu']": "Menu",
 		"footer .footer-grid > div:nth-child(3) a[href='#community']": "Community",
 		"footer .footer-grid > div:nth-child(3) a[href='#form']": "Book Your Event",
+		"footer .footer-grid > div:nth-child(3) a[href='menu.html']": "Full Menu Page",
+		"footer .footer-grid > div:nth-child(3) a[href='location.html']": "Location & Hours",
 		"footer .footer-follow h4": "Follow",
 		"footer .footer-follow .talabat-footer-link span": "Order on Talabat now",
 		"footer .footer-follow .qr-card p": "Loyalty Card - Scan for rewards",

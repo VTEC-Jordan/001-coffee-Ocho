@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Keep key pages and assets crawlable
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+Sitemap: https://vtec-jordan.github.io/Ocho.github.io/sitemap.xml

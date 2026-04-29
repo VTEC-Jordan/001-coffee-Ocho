@@ -89,6 +89,8 @@ window.OCHO_I18N.ar = {
 		"footer .footer-grid > div:nth-child(3) a[href='#menu']": "المنيو",
 		"footer .footer-grid > div:nth-child(3) a[href='#community']": "المجتمع",
 		"footer .footer-grid > div:nth-child(3) a[href='#form']": "احجز فعاليتك",
+		"footer .footer-grid > div:nth-child(3) a[href='menu.html']": "صفحة المنيو الكاملة",
+		"footer .footer-grid > div:nth-child(3) a[href='location.html']": "الموقع وساعات العمل",
 		"footer .footer-follow h4": "تابعنا",
 		"footer .footer-follow .talabat-footer-link span": "اطلب الآن عبر طلبات",
 		"footer .footer-follow .qr-card p": "بطاقة الولاء - امسح للحصول على المكافآت",
